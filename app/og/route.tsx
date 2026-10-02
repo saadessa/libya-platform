@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { siteConfig } from "@/lib/site";
 
-export const runtime = "edge";
+
 
 export function GET() {
   return new ImageResponse(
