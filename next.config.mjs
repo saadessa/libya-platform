@@ -1,8 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    mdxRs: true
+    mdxRs: true,
+    outputFileTracingIncludes: {
+      "/*": ["./content/posts/**/*"]
+    }
   },
+
   images: {
     remotePatterns: [
       {
@@ -16,9 +20,11 @@ const nextConfig = {
     ],
     formats: ["image/avif", "image/webp"]
   },
+
   poweredByHeader: false,
   compress: true,
   reactStrictMode: true,
+
   async headers() {
     return [
       {
